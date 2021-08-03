@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><extensionAttribute>
+<displayName>Battery Condition</displayName>
+<description/>
+<dataType>string</dataType>
+<scriptContentsMac>#!/bin/sh&#13;
+&#13;
+batterystatus=`system_profiler SPPowerDataType | grep "Condition" | awk '{print $2}'`&#13;
+&#13;
+echo "&lt;result&gt;$batterystatus&lt;/result&gt;"</scriptContentsMac>
+</extensionAttribute>
